@@ -1,0 +1,23 @@
+{
+    "version": 2,
+    "env": {
+       
+        "MONGO_URI_DEV": "mongodb+srv://Admin:imasd@cluster0-kudtq.mongodb.net/myBlog2?retryWrites=true&w=majority",
+        "SECRET_KEY": "V1LTIPPoNFKSuQ6HyytGlrUeseoFyZtbvWIQFuFFgc38s9Y4qO/qirGvq/PFvyJA1HbApjwtQtM2PNfN",
+        "CLOUDINARY_NAME": "imasd",
+        "CLOUDINARY_API_KEY": "528835364367842",
+        "CLOUDINARY_API_KEY_SECRET": "L6sIUvAzzdbUNpnjDwJOYRu5kL0"
+    },
+    "builds": [
+        {
+            "src": "app/index.js",
+            "use": "@now/node-server@canary"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/.*",
+            "dest": "app/index.js"
+        }
+    ]
+}
